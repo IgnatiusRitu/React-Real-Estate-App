@@ -1,24 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.scss";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <Link to={`/`} className="logo">
           <img src="/logo.png" alt="" />
           <span>NatoEstate</span>
-        </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contacts</a>
-        <a href="/">Agents</a>
+        </Link>
+        <Link to={`/`}>Home</Link>
+        <Link to={`/`}>About</Link>
+        <Link to={`/`}>Contacts</Link>
+        <Link to={`/`}>Agents</Link>
       </div>
       <div className="right">
-        <a href="/">Sign in</a>
-        <a href="/" className="register">
+        <Link to={`/`}>Sign in</Link>
+        <Link to={`/`} className="register">
           Sign up
-        </a>
+        </Link>
         <div className="menuIcon">
           <img
             src="/menu.png"
@@ -27,12 +28,12 @@ function Navbar() {
           />
         </div>
         <div className={isOpen ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contacts</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <Link to={`/`}>Home</Link>
+          <Link to={`/`}>About</Link>
+          <Link to={`/`}>Contacts</Link>
+          <Link to={`/`}>Agents</Link>
+          <Link to={`/`}>Sign in</Link>
+          <Link to={`/`}>Sign up</Link>
         </div>
       </div>
     </nav>
